@@ -44,7 +44,7 @@ namespace TestWebApplication1.Controllers
 
             return View(data);
         }
-        [Route("Test/{id}")]
+        [Route("{id}")]
         public ActionResult GetById(int id)
         {
             var smartphones = _smartphonesServices.GetAll().First(x=>x.Id==id);

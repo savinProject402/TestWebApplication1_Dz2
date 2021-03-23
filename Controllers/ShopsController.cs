@@ -36,7 +36,7 @@ namespace TestWebApplication1.Controllers
             return new EmptyResult();
         }
 
-        [Route("Test/{id}")]
+        [Route("{id}")]
         public ActionResult GetById(int id)
         {
             var shop = _shopServices.GetAll().First(x => x.Id == id);
