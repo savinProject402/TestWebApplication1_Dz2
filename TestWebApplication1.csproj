@@ -209,6 +209,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GetShopsViewModel.cs" />
     <Compile Include="Models\GetSmartphonesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -279,6 +280,7 @@
     <Content Include="Views\Smartphones\GetById.cshtml" />
     <Content Include="Views\Shops\Create.cshtml" />
     <Content Include="Views\Shops\GetById.cshtml" />
+    <Content Include="Views\Shops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

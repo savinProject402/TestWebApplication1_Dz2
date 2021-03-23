@@ -36,7 +36,29 @@ namespace TestWebApplication1.Controllers
             return new EmptyResult();
         }
 
-        [Route("{id}")]
+        public ActionResult Index(PagingViewModel model)
+        {
+            var shops = _shopServices.GetAll();
+
+            if (model.Page.HasValue && model.PageSize.HasValue)
+                shops = shops.Skip(model.PageSize.Value * (model.Page.Value - 1)).ToList();
+
+            if (model.PageSize.HasValue)
+                shops = shops.Take(model.PageSize.Value).ToList();
+
+            //var identuty = User.Identity as ClaimsIdentity;
+            //var userId = identuty.Claims.First(x=>x.Type==ClaimTypes.NameIdentifier).Value;
+
+            var shopVm = _mapper.Map<List<ShopViewModel>>(shops);
+            var data = new GetShopsViewModel
+            {
+                Shops = shopVm
+            };
+
+            return View(data);
+        }
+
+            [Route("{id}")]
         public ActionResult GetById(int id)
         {
             var shop = _shopServices.GetAll().First(x => x.Id == id);

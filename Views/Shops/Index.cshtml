@@ -1,0 +1,15 @@
+﻿@model TestWebApplication1.Models.GetShopsViewModel
+
+@{ 
+    ViewBag.Title = "Index";   
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (var item in Model.Shops)
+    {
+<li> ID: @item.Id Name: @item.Name Address : @item.Address City: @item.City</li>
+}
+</ul>
+
