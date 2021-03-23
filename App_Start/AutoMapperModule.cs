@@ -16,8 +16,10 @@ namespace TestWebApplication1.App_Start
         {
             builder.Register(context => new MapperConfiguration(cfg => {
 
-                cfg.CreateMap<SmartphonesModel, SmartphonesViewModel>().ReverseMap();
-                cfg.CreateMap<Smartphon,SmartphonesModel>().ReverseMap();
+                cfg.CreateMap<SmartphonesModel, SmartphonesViewModel>(MemberList.Destination);
+                cfg.CreateMap<Smartphon,SmartphonesModel>(MemberList.Destination);
+                cfg.CreateMap<ShopPostModel, ShopModel>(MemberList.Source);
+                cfg.CreateMap<ShopModel, Shop>(MemberList.Source);
             }));
             builder.Register(c =>
             {

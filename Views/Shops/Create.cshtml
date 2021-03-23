@@ -1,0 +1,21 @@
+﻿@model TestWebApplication1.Models.ShopPostModel
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm("Create", "Shops", FormMethod.Post))
+{
+    <H1>Create Chop </H1>
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    @Html.LabelFor(x => x.City)
+    @Html.TextBoxFor(x => x.City)
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address)   
+    <br/> 
+    <input type="submit" value="Добавить" />
+}
+
+

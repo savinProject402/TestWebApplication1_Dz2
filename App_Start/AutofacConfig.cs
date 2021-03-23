@@ -21,6 +21,8 @@ namespace TestWebApplication1.App_Start
 			builder.RegisterControllers(typeof(MvcApplication).Assembly);
 			builder.RegisterType<SmartphonesServices>().As<ISmartphonesServices>();
 			builder.RegisterType<SmartphonesRepository>().As<ISmartphonesRepository>();
+			builder.RegisterType<ShopServices>().As<IShopServices>();
+			builder.RegisterType<ShopsRepository>().As<IShopsRepository>();
 			builder.RegisterModule<AutoMapperModule>();
 			var conteiner = builder.Build();
 

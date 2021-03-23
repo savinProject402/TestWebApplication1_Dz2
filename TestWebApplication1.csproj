@@ -203,6 +203,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShopsController.cs" />
     <Compile Include="Controllers\SmartphonesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,6 +212,9 @@
     <Compile Include="Models\GetSmartphonesViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PagingViewModel.cs" />
+    <Compile Include="Models\ShopPostModel.cs" />
+    <Compile Include="Models\ShopViewModel.cs" />
     <Compile Include="Models\SmartphonesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -272,6 +276,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Smartphones\Index.cshtml" />
+    <Content Include="Views\Smartphones\GetById.cshtml" />
+    <Content Include="Views\Shops\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
