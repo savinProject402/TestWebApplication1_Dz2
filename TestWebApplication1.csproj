@@ -278,6 +278,7 @@
     <Content Include="Views\Smartphones\Index.cshtml" />
     <Content Include="Views\Smartphones\GetById.cshtml" />
     <Content Include="Views\Shops\Create.cshtml" />
+    <Content Include="Views\Shops\GetById.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
