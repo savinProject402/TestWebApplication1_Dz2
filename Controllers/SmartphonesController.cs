@@ -20,9 +20,9 @@ namespace TestWebApplication1.Controllers
             _mapper = mapper;
         }
 
-        // GET: Smartphones
+        //GET: Smartphones
         public ActionResult Index()
-		{
+        {
             var smartphones = _smartphonesServices.GetAll();
 
             var smartVm = _mapper.Map<List<SmartphonesViewModel>>(smartphones);
@@ -33,5 +33,5 @@ namespace TestWebApplication1.Controllers
 
             return View(data);
         }
-	}
+    }
 }
