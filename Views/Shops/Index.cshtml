@@ -9,7 +9,10 @@
 <ul>
     @foreach (var item in Model.Shops)
     {
-<li> ID: @item.Id Name: @item.Name Address : @item.Address City: @item.City</li>
+    <li>
+        ID: @item.Id Name: @item.Name Address : @item.Address City: @item.City
+        @Html.ActionLink("↻", "Update", "Shops", new { Id = item.Id }, new { @class = "color-blue" })
+    </li>
 }
 </ul>
 

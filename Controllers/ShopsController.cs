@@ -28,6 +28,14 @@ namespace TestWebApplication1.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Create(ShopPostModel model)
+        {
+            var createModel = _mapper.Map<ShopModel>(model);
+            _shopServices.Create(createModel);
+
+            return new EmptyResult();
+        }
         public ActionResult Index(PagingViewModel model)
         {
             var shops = _shopServices.GetAll();
@@ -70,14 +78,7 @@ namespace TestWebApplication1.Controllers
             return View(shopPostModel);
 
         }
-        [HttpPost]
-        public ActionResult Create(ShopPostModel model)
-        {
-            var createModel = _mapper.Map<ShopModel>(model);
-            _shopServices.Create(createModel);
 
-            return new EmptyResult();
-        }
 
         [HttpPost]
         public ActionResult Update(ShopPostModel model)

@@ -1,0 +1,13 @@
+﻿@model TestWebApplication1.Models.GetShopsViewModel
+@{
+    ViewBag.Title = "ViewUpdate";
+}
+
+<h2>ViewUpdate</h2>
+@foreach (var shopView in Model.Shops)
+{
+<li>
+    Name: @shopView.Name, Sity: @shopView.City, Address: @shopView.Address
+    @Html.ActionLink("↻", "Update", "Shops", new { Id = shopView.Id }, new { @class = "color-red" })
+</li>
+}
