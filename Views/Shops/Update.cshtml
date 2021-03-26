@@ -1,0 +1,18 @@
+﻿@model TestWebApplication1.Models.ShopPostModel
+
+@{
+    ViewBag.Title = "Update";
+}
+
+@using (Html.BeginForm("Update", "Shops", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    @Html.LabelFor(x => x.City)
+    @Html.TextBoxFor(x => x.City)
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address)
+        <input type="submit" value="Отправить" />
+}

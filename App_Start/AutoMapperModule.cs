@@ -19,9 +19,14 @@ namespace TestWebApplication1.App_Start
                 cfg.CreateMap<SmartphonesModel, SmartphonesViewModel>(MemberList.Destination);
                 cfg.CreateMap<Smartphon,SmartphonesModel>(MemberList.Destination);
                 cfg.CreateMap<ShopModel, ShopViewModel>(MemberList.Destination);
+                cfg.CreateMap<ShopModel, ShopPostModel>(MemberList.Destination);
+
+                cfg.CreateMap<ShopPostModel, ShopModel>(MemberList.Destination);
+
                 cfg.CreateMap<Shop, ShopModel>(MemberList.Destination);
                 cfg.CreateMap<ShopPostModel, ShopModel>(MemberList.Source);
                 cfg.CreateMap<ShopModel, Shop>(MemberList.Source);
+                
             }));
             builder.Register(c =>
             {

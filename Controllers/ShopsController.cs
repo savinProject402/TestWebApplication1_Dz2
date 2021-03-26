@@ -11,6 +11,7 @@ using TestWebApplication1.Models;
 namespace TestWebApplication1.Controllers
 {
     //[RoutePrefix("Shops")]
+    [RoutePrefix("Shops")]
     public class ShopsController : Controller
     {
         private readonly IMapper _mapper;
@@ -21,19 +22,10 @@ namespace TestWebApplication1.Controllers
             _shopServices = shopServices;
             _mapper = mapper;
         }
+
         public ActionResult Create()
         {
             return View();
-        }
-
-
-        [HttpPost]
-        public ActionResult Create(ShopPostModel model)
-        {
-            var createModel = _mapper.Map<ShopModel>(model);
-            _shopServices.Create(createModel);
-
-            return new EmptyResult();
         }
 
         public ActionResult Index(PagingViewModel model)
@@ -58,7 +50,7 @@ namespace TestWebApplication1.Controllers
             return View(data);
         }
 
-            [Route("{id}")]
+        [Route("{id}")]
         public ActionResult GetById(int id)
         {
             var shop = _shopServices.GetAll().First(x => x.Id == id);
@@ -68,5 +60,33 @@ namespace TestWebApplication1.Controllers
             return View(vm);
         }
 
+        
+        [Route("Update{Id}/")]
+        
+        public ActionResult Update (int Id)
+        {
+            var shop = _shopServices.GetById(Id);
+            var shopPostModel = _mapper.Map<ShopPostModel>(shop);
+            return View(shopPostModel);
+
+        }
+        [HttpPost]
+        public ActionResult Create(ShopPostModel model)
+        {
+            var createModel = _mapper.Map<ShopModel>(model);
+            _shopServices.Create(createModel);
+
+            return new EmptyResult();
+        }
+
+        [HttpPost]
+        public ActionResult Update(ShopPostModel model)
+        {
+            var editModel = _mapper.Map<ShopModel>(model);
+            _shopServices.Update(editModel);
+
+            return new EmptyResult();
+
+        }
     }
 }

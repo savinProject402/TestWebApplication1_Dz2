@@ -281,6 +281,7 @@
     <Content Include="Views\Shops\Create.cshtml" />
     <Content Include="Views\Shops\GetById.cshtml" />
     <Content Include="Views\Shops\Index.cshtml" />
+    <Content Include="Views\Shops\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
