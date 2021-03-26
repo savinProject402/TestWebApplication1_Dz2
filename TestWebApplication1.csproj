@@ -301,11 +301,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Smartphones.Data\Smartphones.Data.csproj">
+    <ProjectReference Include="..\Smartphones.Data1\Smartphones.Data.csproj">
       <Project>{f9607a69-59f3-469f-ad27-eb95e791ed9f}</Project>
       <Name>Smartphones.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Smartphones.Domain\Smartphones.Domain.csproj">
+    <ProjectReference Include="..\Smartphones.Domain1\Smartphones.Domain.csproj">
       <Project>{76b1bdcc-ee09-41a6-85f6-7981bf77e666}</Project>
       <Name>Smartphones.Domain</Name>
     </ProjectReference>
