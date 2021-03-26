@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApplication1", "TestWebApplication1.csproj", "{E82197AC-2079-4303-A89F-2123C3A75920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartphones.Domain", "..\Smartphones.Domain\Smartphones.Domain.csproj", "{76B1BDCC-EE09-41A6-85F6-7981BF77E666}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartphones.Domain", "..\Smartphones.Domain1\Smartphones.Domain.csproj", "{76B1BDCC-EE09-41A6-85F6-7981BF77E666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartphones.Data", "..\Smartphones.Data\Smartphones.Data.csproj", "{F9607A69-59F3-469F-AD27-EB95E791ED9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartphones.Data", "..\Smartphones.Data1\Smartphones.Data.csproj", "{F9607A69-59F3-469F-AD27-EB95E791ED9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
