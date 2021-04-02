@@ -2,12 +2,9 @@
 using Smartphones.Data;
 using Smartphones.Domain.Contracs;
 using Smartphones.Domain.Model;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Web;
 using System.Web.Mvc;
 using TestWebApplication1.Models;
 
