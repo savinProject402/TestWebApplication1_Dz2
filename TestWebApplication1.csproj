@@ -217,6 +217,7 @@
     <Compile Include="Models\ShopPostModel.cs" />
     <Compile Include="Models\ShopViewModel.cs" />
     <Compile Include="Models\SmartphonesViewModel.cs" />
+    <Compile Include="Models\SmartphonPostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -283,6 +284,7 @@
     <Content Include="Views\Shops\Index.cshtml" />
     <Content Include="Views\Shops\Update.cshtml" />
     <Content Include="Views\Shops\ViewUpdate.cshtml" />
+    <Content Include="Views\Smartphones\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

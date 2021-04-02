@@ -1,0 +1,22 @@
+﻿@model TestWebApplication1.Models.SmartphonPostModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Smartphones", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    <p>
+        Команда <br />
+
+
+        @Html.DropDownListFor(model => model.ShopId, ViewBag.Teams as SelectList)
+    </p>
+    <br />
+    <input type="submit" value="Добавить" />
+}
+
